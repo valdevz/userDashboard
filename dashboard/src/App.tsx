@@ -1,14 +1,19 @@
+//Main  app component
 import { version } from 'react'
-import reactLogo from './assets/react.svg'
+import UserInfo from './components/UserInfo'
+import UserPosts from './components/UserPosts'
 function App() {
 
   return (
     <>
-      <div>
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        <h1>hola react {version}</h1>
-        <small style={{color:'yellow'}}>La versión es {version}</small>
+      <div className='container'>
+        {/* calling two components to display the user info and posts */}
+        <UserInfo />
+        <UserPosts />
       </div>
+      <footer className='text-center py-4'>
+        Made by: Jorge Valdez; react version {version}
+      </footer>
     </>
   )
 }
